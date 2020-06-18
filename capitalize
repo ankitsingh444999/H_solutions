@@ -1,3 +1,5 @@
+#!/bin/python3
+
 import math
 import os
 import random
@@ -5,11 +7,24 @@ import re
 import sys
 
 # Complete the solve function below.
-def solve(s):
-    split = s.split()
-    f = split[0]
-    l = split[1]
-    return (f[0].upper() + f[1:] +" "+ l[0].upper() + l[1:])
+'''def solve(s):
+    fin = ''
+    spt  = s.split()
+    for elements in spt:
+        temp = ''
+        data = elements[0].upper()
+        se_t = elements[1:]
+        temp = data + se_t
+        fin += temp + ' ' 
+    return fin'''
+def capitalize(s):
+    for x in s[:].split():
+        s = s.replace(x, x.capitalize())
+    return s    
+    if __name__ == '__main__':
+    string = input()
+    capitalized_string = capitalize(string)
+    print(capitalized_string)
 
 if __name__ == '__main__':
     fptr = open(os.environ['OUTPUT_PATH'], 'w')
